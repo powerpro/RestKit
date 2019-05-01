@@ -269,7 +269,7 @@
 {
     // Perform our connection operations in a batch, before we save the MOC
     RKLogInfo(@"Starting %lu connection operations...", (unsigned long) self.connectionQueue.operationCount);
-    [self.connectionQueue setMaxConcurrentOperationCount:50];
+    [self.connectionQueue setMaxConcurrentOperationCount:1];
     [self.connectionQueue setSuspended:NO];
     [self.connectionQueue waitUntilAllOperationsAreFinished];
 
